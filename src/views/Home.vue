@@ -28,6 +28,8 @@
     .home {
         width: 100%;
         min-height: calc(100vh - 80px);
-        background: var(--bg-primary);
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
     }
 </style>

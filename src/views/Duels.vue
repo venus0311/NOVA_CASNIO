@@ -74,6 +74,10 @@
     .duels {
         width: 100%;
         position: relative;
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: calc(100vh - 80px);
      /*   display: flex; */
         flex-direction: column;
         align-items: center;

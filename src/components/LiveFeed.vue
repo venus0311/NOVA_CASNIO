@@ -144,7 +144,6 @@ export default {
 <style scoped>
 .live-feed {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background: var(--bg-primary);
 }
 
 .section-title {

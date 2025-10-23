@@ -14,7 +14,8 @@ html, body {
 }
 
 body {
-    background: #1A1A1A;
+    background: #1A1A1A url('~@/assets/img/main_bg.svg') no-repeat center center fixed;
+    background-size: cover;
     color: #ffffff;
 }
 

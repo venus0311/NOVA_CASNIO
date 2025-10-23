@@ -33,6 +33,10 @@
 <style scoped>
     .blackjack {
         width: 100%;
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: calc(100vh - 80px);
     }
 
     .blackjack .slide-fade-enter-active {

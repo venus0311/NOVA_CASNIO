@@ -1,10 +1,11 @@
 <template>
     <aside id="chat" v-bind:class="{ 
         'chat-open': generalSidebarMobile === 'Chat',
-        'chat-rain': generalRain.active !== null
+        'chat-rain': generalRain.active !== null,
+        'chat-desktop-closed': !generalDesktopChatOpen && generalSidebarMobile !== 'Chat'
     }">
         <div class="chat-toggle">
-            <button v-on:click="generalSetSidebarMobile('Chat')">
+            <button v-on:click="toggleDesktopChat">
                 <div class="button-inner">
                     <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18.75 0H2.25C1.00736 0 0 1.00736 0 2.25V14.25C0 15.4926 1.00736 16.5 2.25 16.5H4.91251L4.50452 20.1675C4.45904 20.5792 4.75593 20.9498 5.16766 20.9953C5.38027 21.0188 5.59278 20.9503 5.75178 20.8073L10.5383 16.5H18.75C19.9926 16.5 21 15.4926 21 14.25V2.25C21 1.00736 19.9926 0 18.75 0Z" />
@@ -109,6 +110,7 @@
                 'modalsSetShow',
                 'modalsSetData', 
                 'generalSetSidebarMobile', 
+                'generalSetDesktopChatOpen',
                 'chatSetScroll',
                 'chatGetMessagesSocket', 
                 'chatSendMessageSocket',
@@ -202,12 +204,16 @@
                 }
 
                 this.chatMessage = '';
+            },
+            toggleDesktopChat() {
+                this.generalSetDesktopChatOpen(!this.generalDesktopChatOpen);
             }
         },
         computed: {
             ...mapGetters([
                 'socketSendLoading', 
                 'generalSidebarMobile', 
+                'generalDesktopChatOpen',
                 'generalSettings', 
                 'authUser',
                 'chatScroll', 
@@ -275,9 +281,13 @@
         transition: transform 0.3s ease;
     }
 
+    aside#chat.chat-desktop-closed {
+        transform: translateX(100%);
+    }
+
     aside#chat .chat-toggle {
         position: absolute;
-        display: none;
+        display: block;
         bottom: 50px;
         left: -65px;
     }
@@ -288,7 +298,7 @@
         filter: drop-shadow(0px 4px 25px rgba(1, 230, 169, 0.15)) drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.35));
     }
 
-    aside#chat .chat-toggle button .button-inner {
+    aside#chat .chat-toggle button .button-inner {       
         width: 100%;
         height: 100%;
         display: flex;
@@ -615,7 +625,7 @@
 
         aside#chat {
             transform: translate(100%, 0);
-            z-index: 100;
+            z-index: 121;
         }
 
         aside#chat.chat-open {
@@ -623,7 +633,7 @@
         }
 
         aside#chat .chat-toggle {
-            display: block;
+            display: none;
         }
 
         aside#chat.chat-open .chat-toggle {
@@ -636,7 +646,14 @@
 
     }
 
-    @media only screen and (max-width: 1175px) {
+    /* Desktop chat toggle - only show on larger screens */
+    @media only screen and (min-width: 1501px) {
+        aside#chat .chat-toggle {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 9600px) {
 
         aside#chat .chat-toggle {
             display: none;
@@ -652,3 +669,6 @@
 
     }
 </style>
+
+
+

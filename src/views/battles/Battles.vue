@@ -58,6 +58,10 @@
         align-items: center;
         padding: 50px 20px;
         box-sizing: border-box;
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: calc(100vh - 80px);
     }
 
     .battles .battles-header {

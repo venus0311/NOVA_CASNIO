@@ -1,5 +1,6 @@
 const state = {
     generalSidebarMobile: null,
+    generalDesktopChatOpen: true,
     generalSettings: null,
     generalTimeDiff: null,
     generalBets: {
@@ -18,6 +19,7 @@ const state = {
 
 const getters = {
     generalSidebarMobile: state => state.generalSidebarMobile,
+    generalDesktopChatOpen: state => state.generalDesktopChatOpen,
     generalSettings: state => state.generalSettings,
     generalTimeDiff: state => state.generalTimeDiff,
     generalBets: state => state.generalBets,
@@ -28,6 +30,9 @@ const getters = {
 const mutations = {
     general_set_sidebar_mobile(state, value) {
         state.generalSidebarMobile = value;
+    },
+    general_set_desktop_chat_open(state, value) {
+        state.generalDesktopChatOpen = value;
     },
     general_set_settings(state, settings) {
         state.generalSettings = settings;
@@ -86,6 +91,9 @@ const mutations = {
 const actions = {
     generalSetSidebarMobile({ commit }, value) {
         commit('general_set_sidebar_mobile', value);
+    },
+    generalSetDesktopChatOpen({ commit }, value) {
+        commit('general_set_desktop_chat_open', value);
     },
     generalClearRainActive({ commit }) {
         commit('general_set_rain_active', null);

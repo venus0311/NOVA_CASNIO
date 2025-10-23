@@ -49,6 +49,10 @@
         width: 100%;
         display: flex;
         padding: 45px 0;
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
+        min-height: calc(100vh - 80px);
     }
 
     .roll .roll-container {

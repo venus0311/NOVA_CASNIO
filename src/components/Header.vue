@@ -15,7 +15,7 @@
             <div class="header-right">
                 <button class="btn-signin" @click="showSignInModal = true">Sign In</button>
                 <button class="btn-register" @click="showSignupModal = true">Register</button>
-                <button class="btn-chat">
+                <button class="btn-chat" @click="toggleChat">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M18 5v8a2 2 0 01-2 2h-5l-5 4v-4H4a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -40,6 +40,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import SignupModal from '@/components/SignupModal.vue';
 import SignInModal from '@/components/SignInModal.vue';
 
@@ -56,6 +57,7 @@ export default {
         }
     },
     methods: {
+        ...mapActions(['generalSetSidebarMobile', 'generalSetDesktopChatOpen']),
         switchToSignIn() {
             this.showSignupModal = false;
             this.showSignInModal = true;
@@ -63,7 +65,19 @@ export default {
         switchToSignUp() {
             this.showSignInModal = false;
             this.showSignupModal = true;
+        },
+        toggleChat() {
+            // Check if we're on mobile/tablet (use mobile chat functionality)
+            if (window.innerWidth <= 1500) {
+                this.generalSetSidebarMobile(this.generalSidebarMobile === 'Chat' ? null : 'Chat');
+            } else {
+                // Desktop: toggle desktop chat using Vuex
+                this.generalSetDesktopChatOpen(!this.generalDesktopChatOpen);
+            }
         }
+    },
+    computed: {
+        ...mapGetters(['generalSidebarMobile', 'generalDesktopChatOpen'])
     }
 }
 </script>

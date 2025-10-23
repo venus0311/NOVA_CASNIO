@@ -282,7 +282,7 @@
     /* Mobile behavior */
     .mobile-fab { 
         position: fixed; 
-        top: 100px; 
+        top: 60px; 
         left: var(--spacing-md); 
         z-index: 120; 
         display: none; 
@@ -317,11 +317,32 @@
         aside#sidebar-left.mobile-open { transform: translateX(0); }
         aside#sidebar-left.collapsed { width: 280px; }
         .mobile-fab { display: inline-flex; }
+        
+        /* Hide sidebar header menu toggle on mobile/tablet */
+        .sidebar-header {
+            display: none;
+        }
     }
 
     @media only screen and (max-width: 768px) {
         aside#sidebar-left { 
             width: 260px; 
+        }
+        
+        .mobile-fab {
+            top: 55px;
+            left: var(--spacing-sm);
+            padding: var(--spacing-sm);
+            min-height: 44px;
+            min-width: 44px;
+        }
+    }
+    
+    @media only screen and (max-width: 480px) {
+        .mobile-fab {
+            top: 50px;
+            left: var(--spacing-xs);
+            padding: var(--spacing-xs) var(--spacing-sm);
         }
     }
 </style> 

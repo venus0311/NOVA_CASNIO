@@ -59,7 +59,7 @@
             }
         },
         computed: {
-            ...mapGetters(['socketGeneral', 'generalSettings', 'authToken', 'authUser']),
+            ...mapGetters(['socketGeneral', 'generalSettings', 'authToken', 'authUser', 'generalSidebarMobile', 'generalDesktopChatOpen']),
             appGetRouteName() {
                 return this.$route.name;
             },
@@ -82,9 +82,13 @@
                     };
                 }
                 const left = this.sidebarCollapsed === true ? 64 : 240;
+                // Check both mobile chat state and desktop chat state
+                const isMobileChatOpen = this.generalSidebarMobile === 'Chat';
+                const isDesktopChatOpen = this.generalDesktopChatOpen;
+                const chatWidth = (isMobileChatOpen || isDesktopChatOpen) ? 325 : 0;
                 return {
                     left: left + 'px',
-                    width: `calc(100% - 325px - ${left}px)`,
+                    width: `calc(100% - ${chatWidth}px - ${left}px)`,
                     top: '80px'
                 };
             }
@@ -99,7 +103,7 @@
                         });
                     }
                 }
-            }
+            },
         },
         created() {
             this.socketConnectGeneral();
@@ -144,6 +148,7 @@
         scrollbar-width: none;
         -ms-overflow-style: none;
         background: var(--bg-primary);
+        transition: right 0.3s ease, width 0.3s ease;
     }
 
     /*

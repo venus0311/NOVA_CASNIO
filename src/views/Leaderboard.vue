@@ -115,7 +115,9 @@
         flex-direction: column;
         align-items: center;
         padding: 65px 10px 45px 10px;
-        background: var(--bg-primary);
+        background: var(--bg-primary) url('~@/assets/img/main_bg.svg') no-repeat center center;
+        background-size: cover;
+        background-attachment: fixed;
         min-height: calc(100vh - 80px);
     }
 

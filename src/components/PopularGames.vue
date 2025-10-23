@@ -63,7 +63,6 @@ export default {
 <style scoped>
 .popular-games {
     padding: var(--spacing-2xl) var(--spacing-lg);
-    background: var(--bg-primary);
 }
 
 .section-title {
@@ -318,14 +317,19 @@ export default {
     background: transparent;
     color: #2F4F4F;
     border: 1px solid #2F4F4F;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 12px;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 14px;
     transition: all 0.3s ease;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    min-height: 44px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .game-screen.casino-bg .play-button {
@@ -389,6 +393,14 @@ export default {
     .section-title {
         font-size: 28px;
     }
+    
+    .play-button {
+        padding: 14px 28px;
+        font-size: 15px;
+        min-height: 48px;
+        min-width: 130px;
+        border-radius: 14px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -411,6 +423,24 @@ export default {
     
     .game-image {
         height: 100px;
+    }
+    
+    .play-button {
+        padding: 16px 32px;
+        font-size: 16px;
+        min-height: 52px;
+        min-width: 140px;
+        border-radius: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .play-button {
+        padding: 18px 36px;
+        font-size: 18px;
+        min-height: 56px;
+        min-width: 160px;
+        border-radius: 18px;
     }
 }
 </style>
