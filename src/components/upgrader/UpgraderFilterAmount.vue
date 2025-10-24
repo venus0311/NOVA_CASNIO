@@ -87,8 +87,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #092a45;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
     }
 
     .upgrader-filter-amount button.button-toggle .button-inner {
@@ -98,13 +98,13 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
-        background-color: #09263f;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
     }
 
     .upgrader-filter-amount button.button-toggle .button-inner svg {
         width: 9px;
-        fill: #bbbfd0;
+        fill: #ffffff;
         transition: all 0.3s ease;
     }
 
@@ -117,7 +117,7 @@
         align-items: center;
         font-size: 12px;
         font-weight: 600;
-        color: #49687d;
+        color: #ffffff;
     }
 
     .upgrader-filter-amount button.button-toggle .inner-value img {
@@ -151,8 +151,9 @@
 
     .upgrader-filter-amount .menu-inner {
         width: 100%;
-        background: #061d30;
-        border: 1px solid #0a273f;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
     }
 
     .upgrader-filter-amount .menu-inner button {
@@ -163,8 +164,8 @@
         padding: 0 14px;
         font-size: 14px;
         font-weight: 600;
-        color: #8bacc8;
-        border-bottom: 1px solid #0a273f;
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.3s ease;
     }
 
@@ -173,7 +174,7 @@
     }
 
     .upgrader-filter-amount .menu-inner button:hover {
-        background: rgba(19, 66, 88, 0.15);
+        background: rgba(255, 255, 255, 0.12);
     }
 
     @media only screen and (max-width: 750px) {

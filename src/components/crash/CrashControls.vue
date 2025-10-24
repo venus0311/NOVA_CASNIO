@@ -308,9 +308,10 @@
         width: 275px;
         height: 510px;
         padding: 15px;
-        border-radius: 15px;
-        background-color: #051f33;
-        border: 1px solid rgba(20, 68, 104, 0.35);
+        border-radius: 20px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
     }
 
     .crash-controls .controls-mode {
@@ -335,12 +336,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #214059;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .crash-controls .controls-mode button.button-active::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #01e0a3 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     .crash-controls .controls-mode button::after {
@@ -350,8 +351,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background-color: #051f33;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
     }
 
     .crash-controls .controls-mode button .button-inner {
@@ -363,23 +364,23 @@
         align-items: center;
         top: 1px;
         left: 1px;
-        background-color: #214059;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 14px;
         z-index: 1;
     }
 
     .crash-controls .controls-mode button.button-active .button-inner {
-        background: radial-gradient(135.81% 81.75% at 83.06% 50%, rgba(0, 255, 194, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(255deg, rgba(0, 255, 194, 0.05) -46.99%, rgba(0, 170, 109, 0.05) 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     .crash-controls .controls-mode button .button-inner span {
         font-size: 14px;
         font-weight: 700;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .crash-controls .controls-mode button.button-active .button-inner span  {
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
+        background: linear-gradient(255deg, #ffffff 0%, #cccccc 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -402,8 +403,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, #04131f 0%, #223a4e 100%);
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .crash-controls .controls-amount input,
@@ -417,8 +418,9 @@
         font-size: 12px;
         font-weight: 600;
         color: #ffffff;
-        background-color: #07253b;
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        border: none;
     }
 
     .crash-controls .controls-amount input {
@@ -427,7 +429,7 @@
 
     .crash-controls .controls-amount input::placeholder,
     .crash-controls .controls-cashout input::placeholder {
-        color: #5e768e;
+        color: #888888;
     }
 
     .crash-controls .amount-buttons,
@@ -462,8 +464,8 @@
         font-size: 12px;
         font-weight: 800;
         color: #ffffff;
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 12px;
     }
 
     .crash-controls .amount-buttons button.button-max .button-inner {
@@ -509,12 +511,12 @@
         font-size: 16px;
         font-weight: 800;
         color: #ffffff;
-        background: linear-gradient(255deg, #fca311 0%, #ffb703 100%);
-        clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 25%, 100% 75%, calc(100% - 7px) 100%, 7px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .crash-controls .controls-manual button.button-bet .button-inner {
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     .crash-controls .manual-bets {
@@ -536,23 +538,23 @@
         align-items: center;
         font-size: 10px;
         font-weight: 700;
-        color: #7a93ac;
+        color: #ffffff;
     }
 
     .crash-controls .header-player svg {
         width: 14px;
         height: 12px;
         margin-right: 8px;
-        fill: #7a93ac;
+        fill: #ffffff;
     }
 
     .crash-controls .header-player svg path {
-        fill: #7a93ac;
+        fill: #ffffff;
     }
 
     .crash-controls .header-player span {
         margin-left: 5px;
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%), #ffffff;
+        background: linear-gradient(255deg, #ffffff 0%, #cccccc 100%), #ffffff;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -573,7 +575,7 @@
     .crash-controls .amount-value {
         font-size: 8px;
         font-weight: 600;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .crash-controls .amount-value span {
@@ -596,7 +598,7 @@
         position: absolute;
         bottom: 0;
         left: 0;
-        background: linear-gradient(180deg, rgba(5, 31, 51, 0) 0%, #051f33 100%);
+        background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, #1a1a1a 100%);
         z-index: 1;
     }
 
@@ -662,8 +664,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, #04131f 0%, #223A4e 100%);
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .crash-controls .adjust-win input,
@@ -680,8 +682,9 @@
         font-size: 12px;
         font-weight: 600;
         color: #ffffff;
-        background-color: #07253b;
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        border: none;
     }
 
     .crash-controls .stop-profit input,
@@ -695,7 +698,7 @@
     .crash-controls .stop-lose input::placeholder,
     .crash-controls .auto-count input::placeholder {
         font-size: 11px;
-        color: #5e768e;
+        color: #888888;
     }
 
     .crash-controls .stop-profit img,
@@ -730,12 +733,12 @@
         font-size: 14px;
         font-weight: 800;
         color: #ffffff;
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
-        clip-path: polygon(7px 0, calc(100% - 7px) 0, 100% 25%, 100% 75%, calc(100% - 7px) 100%, 7px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .crash-controls .controls-auto button.button-stop .button-inner {
-        background: linear-gradient(255deg, #fca311 0%, #ffb703 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     @media only screen and (max-width: 950px) {

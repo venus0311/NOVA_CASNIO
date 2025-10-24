@@ -73,6 +73,71 @@
                 </div>
             </div>
         </div>
+        <div class="crypto-section">
+            <div class="crypto-title">Our Deposit Methods</div>
+            <div class="crypto-icons">
+                <div class="crypto-icon" title="Bitcoin">
+                    <div class="crypto-circle btc">
+                        <span class="crypto-symbol">₿</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Ethereum">
+                    <div class="crypto-circle eth">
+                        <span class="crypto-symbol">Ξ</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="TON">
+                    <div class="crypto-circle ton">
+                        <span class="crypto-symbol">T</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="TRON">
+                    <div class="crypto-circle trx">
+                        <span class="crypto-symbol">T</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Litecoin">
+                    <div class="crypto-circle ltc">
+                        <span class="crypto-symbol">Ł</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Binance Coin">
+                    <div class="crypto-circle bnb">
+                        <span class="crypto-symbol">B</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Tether">
+                    <div class="crypto-circle usdt">
+                        <span class="crypto-symbol">₮</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Solana">
+                    <div class="crypto-circle sol">
+                        <span class="crypto-symbol">◎</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Dogecoin">
+                    <div class="crypto-circle doge">
+                        <span class="crypto-symbol">Ð</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Shiba Inu">
+                    <div class="crypto-circle shib">
+                        <span class="crypto-symbol">🐕</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Polygon">
+                    <div class="crypto-circle matic">
+                        <span class="crypto-symbol">⬟</span>
+                    </div>
+                </div>
+                <div class="crypto-icon" title="Generic Crypto">
+                    <div class="crypto-circle generic">
+                        <span class="crypto-symbol">₿</span>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="footer-bottom">
             <span class="gradient-orange">NOVA-CASINO is a premium gaming platform committed to providing fair, secure, and exciting gaming experiences for all our users.</span>
         </div>
@@ -251,6 +316,115 @@
         font-weight: 600;
     }
 
+    /* Crypto Icons Section */
+    footer#footer .crypto-section {
+        width: 1250px;
+        margin: 30px 0;
+        text-align: center;
+    }
+
+    footer#footer .crypto-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    footer#footer .crypto-icons {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 15px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    footer#footer .crypto-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    footer#footer .crypto-icon:hover {
+        transform: translateY(-3px) scale(1.1);
+    }
+
+    footer#footer .crypto-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    footer#footer .crypto-circle:hover {
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        transform: scale(1.1);
+    }
+
+    footer#footer .crypto-symbol {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Individual Crypto Colors */
+    footer#footer .crypto-circle.btc {
+        background: linear-gradient(135deg, #f7931a 0%, #ff6b00 100%);
+    }
+
+    footer#footer .crypto-circle.eth {
+        background: linear-gradient(135deg, #627eea 0%, #4f46e5 100%);
+    }
+
+    footer#footer .crypto-circle.ton {
+        background: linear-gradient(135deg, #0088cc 0%, #0066aa 100%);
+    }
+
+    footer#footer .crypto-circle.trx {
+        background: linear-gradient(135deg, #ff060a 0%, #cc0000 100%);
+    }
+
+    footer#footer .crypto-circle.ltc {
+        background: linear-gradient(135deg, #bfbbbb 0%, #8a8a8a 100%);
+    }
+
+    footer#footer .crypto-circle.bnb {
+        background: linear-gradient(135deg, #f3ba2f 0%, #f0b90b 100%);
+    }
+
+    footer#footer .crypto-circle.usdt {
+        background: linear-gradient(135deg, #26a17b 0%, #1e8b6b 100%);
+    }
+
+    footer#footer .crypto-circle.sol {
+        background: linear-gradient(135deg, #9945ff 0%, #14f195 100%);
+    }
+
+    footer#footer .crypto-circle.doge {
+        background: linear-gradient(135deg, #c2a633 0%, #b8941f 100%);
+    }
+
+    footer#footer .crypto-circle.shib {
+        background: linear-gradient(135deg, #ff6b35 0%, #f7931a 100%);
+    }
+
+    footer#footer .crypto-circle.matic {
+        background: linear-gradient(135deg, #8247e5 0%, #6b46c1 100%);
+    }
+
+    footer#footer .crypto-circle.generic {
+        background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    }
+
     @media only screen and (max-width: 1600px) {
 
         footer#footer {
@@ -262,6 +436,10 @@
         }
 
         footer#footer .footer-bottom {
+            width: 100%;
+        }
+
+        footer#footer .crypto-section {
             width: 100%;
         }
 
@@ -306,6 +484,20 @@
             padding-left: 0;
         }
 
+        footer#footer .crypto-icons {
+            grid-template-columns: repeat(6, 1fr);
+            gap: 12px;
+        }
+
+        footer#footer .crypto-circle {
+            width: 45px;
+            height: 45px;
+        }
+
+        footer#footer .crypto-symbol {
+            font-size: 18px;
+        }
+
     }
 
     @media only screen and (max-width: 700px) {
@@ -331,6 +523,24 @@
             display: none;
         }
 
+        footer#footer .crypto-icons {
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        footer#footer .crypto-circle {
+            width: 40px;
+            height: 40px;
+        }
+
+        footer#footer .crypto-symbol {
+            font-size: 16px;
+        }
+
+        footer#footer .crypto-title {
+            font-size: 14px;
+        }
+
     }
 
     @media only screen and (max-width: 450px) {
@@ -341,6 +551,25 @@
 
         footer#footer .links-section:nth-child(3) {
             margin-top: 25px;
+        }
+
+        footer#footer .crypto-icons {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        footer#footer .crypto-circle {
+            width: 35px;
+            height: 35px;
+        }
+
+        footer#footer .crypto-symbol {
+            font-size: 14px;
+        }
+
+        footer#footer .crypto-title {
+            font-size: 12px;
+            margin-bottom: 15px;
         }
 
     }

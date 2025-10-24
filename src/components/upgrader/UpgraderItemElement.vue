@@ -50,12 +50,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(223deg, rgba(66, 107, 252, 0.35) 0%, rgb(66, 107, 252, 0.6) 100%);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
         z-index: -1;
     }
 
     .upgrader-item-element.element-selected:before {
-        background: linear-gradient(223deg, rgba(46, 202, 146, 0.35) 0%, rgb(46, 202, 146, 0.6) 100%);
+        background: rgba(255, 255, 255, 0.15);
     }
 
     .upgrader-item-element .element-inner {
@@ -66,15 +67,13 @@
         justify-content: space-between;
         align-items: center;
         padding: 15px 0;
-        background: radial-gradient(80% 80% at 50.00% 50.00%, rgb(66, 107, 252, 0.2) 0%, rgba(0, 0, 0, 0.00) 100%), 
-                    linear-gradient(223deg, rgba(5, 29, 48, 0.35) 0%, rgba(31, 99, 153, 0.09) 50%, rgba(5, 29, 48, 0.35) 100%),
-                    repeating-linear-gradient(-55deg, transparent, transparent 5px, rgba(2, 21, 36, 0.25) 5px, rgba(2, 21, 36, 0.25) 10px), #042037;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .upgrader-item-element.element-selected .element-inner {
-        background: radial-gradient(80% 80% at 50.00% 50.00%, rgb(46, 202, 146, 0.2) 0%, rgba(0, 0, 0, 0.00) 100%), 
-                    linear-gradient(223deg, rgba(5, 29, 48, 0.35) 0%, rgba(31, 99, 153, 0.09) 50%, rgba(5, 29, 48, 0.35) 100%),
-                    repeating-linear-gradient(-55deg, transparent, transparent 5px, rgba(2, 21, 36, 0.25) 5px, rgba(2, 21, 36, 0.25) 10px), #042037;
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .upgrader-item-element .inner-name {
@@ -82,7 +81,7 @@
         text-align: center;
         font-size: 14px;
         font-weight: 600;
-        color: #5e768e;
+        color: #ffffff;
     }
 
     .upgrader-item-element .inner-image {
@@ -112,7 +111,7 @@
     .upgrader-item-element .price-value {
         font-size: 10px;
         font-weight: 600;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .upgrader-item-element .price-value span {

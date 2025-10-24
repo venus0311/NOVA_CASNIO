@@ -55,16 +55,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, rgba(20, 68, 104, 0) 0%, #144468 100%);
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 12px;
     }
 
     button.crash-history-element.element-high::before {
-        background: linear-gradient(180deg, rgba(255, 230, 0, 0) 0%, #ffe600 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     button.crash-history-element.element-mid::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #01e0a3 100%);
+        background: rgba(255, 107, 0, 0.4);
     }
 
     button.crash-history-element.element-high::after,
@@ -75,8 +75,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background-color: #072c44;
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 11px;
     }
 
     button.crash-history-element .element-inner {
@@ -88,23 +88,23 @@
         align-items: center;
         top: 1px;
         left: 1px;
-        background: linear-gradient(255deg, #04243e 0%, #0c314d 100%);
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 11px;
         z-index: 1;
     }
 
     button.crash-history-element.element-high .element-inner {
-        background: radial-gradient(138.28% 81.75% at 84.57% 50%, rgba(255, 153, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(255deg, rgba(255, 153, 0, 0.05) 0%, rgba(255, 230, 0, 0.05) 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     button.crash-history-element.element-mid .element-inner {
-        background: radial-gradient(138.28% 81.75% at 84.57% 50%, rgba(0, 255, 194, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(255deg, rgba(0, 255, 194, 0.05) 0%, rgba(0, 170, 109, 0.05) 100%);
+        background: rgba(255, 107, 0, 0.4);
     }
 
     button.crash-history-element .element-inner span {
         font-size: 14px;
         font-weight: 700;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     button.crash-history-element.element-high .element-inner span {

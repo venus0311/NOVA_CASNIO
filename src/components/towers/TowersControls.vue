@@ -184,7 +184,7 @@
         display: flex;
         justify-content: space-between;
         padding-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.04);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .towers-controls .controls-mode button {
@@ -203,13 +203,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #07253b;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
         z-index: -1;
     }
 
     .towers-controls .controls-mode button.button-active::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #01e0a3 100%);
+        background: rgba(255, 107, 0, 0.5);
     }
 
     .towers-controls .controls-mode button.button-active::after {
@@ -219,8 +219,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background-color: #07253b;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
         z-index: -1;
     }
 
@@ -232,14 +232,14 @@
         justify-content: center;
         font-size: 12px;
         font-weight: 700;
-        color: #5e768e;
-        background-color: #07253b;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
     }
 
     .towers-controls .controls-mode button.button-active .button-inner {
-        color: #00fff2;
-        background: radial-gradient(81.75% 81.75% at 50% 50%, rgba(0, 255, 194, 0.2) 0%, rgba(0, 0, 0, 0) 100%), linear-gradient(256.23deg, rgba(0, 255, 194, 0.05) 0%, rgba(0, 170, 109, 0.05) 100%);
+        color: #ffffff;
+        background: rgba(255, 107, 0, 0.15);
     }
 
     .towers-controls .controls-amount {
@@ -257,8 +257,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, #04131f 0%, #223a4e 100%);
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .towers-controls .controls-amount input {
@@ -268,12 +268,13 @@
         font-size: 12px;
         font-weight: 600;
         color: #ffffff;
-        background-color: #062137;
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border: none;
+        border-radius: 14px;
     }
 
     .towers-controls .controls-amount input::placeholder {
-        color: #5e768e;
+        color: #888888;
     }
 
     .towers-controls .controls-amount img {
@@ -311,8 +312,8 @@
         font-size: 12px;
         font-weight: 800;
         color: #ffffff;
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 12px;
     }
 
     .towers-controls .controls-bottom {
@@ -345,19 +346,20 @@
         align-items: center;
         font-size: 12px;
         font-weight: 700;
-        color: #bbbfd0;
-        background: #214059;
+        color: #ffffff;
+        background: rgba(255, 107, 0, 0.3);
         transition: color 0.3s ease;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        border-radius: 15px;
     }
 
     .towers-controls .bottom-info button:hover .button-inner {
         color: #ffffff;
+        background: rgba(255, 107, 0, 0.5);
     }
 
     .towers-controls .bottom-info button .button-inner svg {
         margin-right: 6px;
-        fill: #bbbfd0;
+        fill: #ffffff;
         transition: fill 0.3s ease;
     }
 
@@ -383,13 +385,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, rgba(0, 170, 109, 0) 0%, #00ffc2 100%);
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
         z-index: -1;
     }
 
     .towers-controls button.button-bet.button-lose::before {
-        background: linear-gradient(180deg, rgba(0, 170, 109, 0) 0%, #f55046 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-controls button.button-bet.button-lose::after,
@@ -400,8 +402,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background-color: #07253b;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
         z-index: -1;
     }
 
@@ -412,22 +414,19 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        border-radius: 14px;
     }
 
     .towers-controls button.button-bet .button-inner {
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-controls button.button-bet.button-lose .button-inner {
-        background: 
-            linear-gradient(0deg, rgba(245, 80, 70, 0.25), rgba(245, 80, 70, 0.25)), 
-            linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
-            linear-gradient(255deg, #07263d 0%, #07243a 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-controls button.button-cashout .button-inner {
-        background: linear-gradient(255deg, rgba(0, 255, 194, 0.35) -20%, rgba(0, 170, 109, 0.35) 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-controls button.button-bet .button-loading.fade-leave-active,

@@ -145,9 +145,10 @@
         flex-direction: column;
         align-items: center;
         padding: 35px 30px 30px 30px;
-        border-radius: 15px;
-        background: radial-gradient(100% 100% at 50% 0%, rgba(0, 255, 194, 0.25) 0%, rgba(7, 38, 61, 0) 80%), 
-                    linear-gradient(256deg, #07263d 0%, #07243a 100%);
+        border-radius: 20px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
     }
 
     .modal-fair-game .game-header {
@@ -164,7 +165,8 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background: linear-gradient(255deg, rgba(0, 255, 194, 0.2)0%, rgba(0, 170, 109, 0.2) 100%);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .modal-fair-game .header-icon img {
@@ -177,6 +179,7 @@
         text-align: center;
         font-size: 32px;
         font-weight: 900;
+        color: #ffffff;
     }
 
     .modal-fair-game .game-element,
@@ -214,14 +217,15 @@
         align-items: center;
         margin-top: 12px;
         padding: 0 52px 0 20px;
-        border-radius: 8px;
-        background: #071f2e;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .modal-fair-game .element-content span {
         font-size: 16px;
         font-weight: 600;
-        color: #5e768e;
+        color: #ffffff;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -237,12 +241,12 @@
     .modal-fair-game .element-content button svg {
         width: 20px;
         height: auto;
-        fill: #49687d;
+        fill: #ffffff;
         transition: fill 0.3s ease;
     }
 
     .modal-fair-game .element-content button:hover svg {
-        fill: #ffffff;
+        fill: #cccccc;
     }
 
     @media only screen and (max-width: 740px) {

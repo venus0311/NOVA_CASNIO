@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <input v-model="upgraderAmount" type="range" v-bind:min="0.01" v-bind:max="100000" step="0.01" v-bind:style="{ 
-                    'background-image': '-webkit-gradient(linear, left top, right top, color-stop(' + upgraderGetPercentageAmount + '%, #164368), color-stop(' + upgraderGetPercentageAmount + '%, rgba(0, 0, 0, 0.35)))' 
+                    'background-image': '-webkit-gradient(linear, left top, right top, color-stop(' + upgraderGetPercentageAmount + '%, #ff6b35), color-stop(' + upgraderGetPercentageAmount + '%, rgba(255, 107, 53, 0.3)))' 
                 }">
             </div>
             <button v-on:click="upgraderFairButton()" class="button-fair">
@@ -164,9 +164,10 @@
         justify-content: space-between;
         align-items: center;
         padding: 35px 25px 20px 25px;
-        border-radius: 15px;
-        background: rgba(12, 63, 103, 0.2);
-        border: 1px dashed rgba(62, 109, 146, 0.35);
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
     }
 
     .upgrader-game .controls-title,
@@ -174,7 +175,7 @@
         text-align: center;
         font-size: 15px;
         font-weight: 700;
-        color: #5e768e;
+        color: #ffffff;
     }
 
     .upgrader-game .controls-amount {
@@ -195,8 +196,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, #04131f 0%, #223a4e 100%);
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
     }
 
     .upgrader-game .amount-input input {
@@ -206,12 +207,13 @@
         font-size: 12px;
         font-weight: 600;
         color: #ffffff;
-        background-color: #031a2d;
-        clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 25%, 100% 75%, calc(100% - 10px) 100%, 10px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        border: none;
     }
 
     .upgrader-game .amount-input input::placeholder {
-        color: #5e768e;
+        color: #888888;
     }
 
     .upgrader-game .amount-input img {
@@ -227,11 +229,11 @@
         width: 100%;
         height: 10px;
         margin-top: 16px;
-        border-radius: 5px;
+        border-radius: 10px;
         outline: none;
         -webkit-appearance: none;
         -moz-apperance: none;
-        background: rgba(0, 0, 0, 0.35);
+        background: rgba(255, 107, 53, 0.3);
         transition: all 0.03s ease;
     }
 
@@ -279,8 +281,8 @@
         font-size: 11px;
         font-weight: 800;
         color: #ffffff;
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
-        clip-path: polygon(4px 0, calc(100% - 4px) 0, 100% 25%, 100% 75%, calc(100% - 4px) 100%, 4px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 12px;
     }
 
     .upgrader-game button.button-fair {
@@ -296,24 +298,24 @@
         align-items: center;
         font-size: 12px;
         font-weight: 700;
-        color: #bbbfd0;
-        background: #214059;
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.08);
         transition: color 0.3s ease;
-        clip-path: polygon(6px 0, calc(100% - 6px) 0, 100% 25%, 100% 75%, calc(100% - 6px) 100%, 6px 100%, 0 75%, 0 25%);
+        border-radius: 15px;
     }
 
     .upgrader-game button.button-fair:hover .button-inner {
-        color: #ffffff;
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .upgrader-game button.button-fair .button-inner svg {
         margin-right: 6px;
-        fill: #bbbfd0;
+        fill: #ffffff;
         transition: fill 0.3s ease;
     }
 
     .upgrader-game button.button-fair:hover .button-inner svg {
-        fill: #ffffff;
+        fill: #cccccc;
     }
 
     .upgrader-game .game-mid {
@@ -330,8 +332,8 @@
         position: relative;
         border-radius: 50%;
         padding: 1px;
-        background: rgba(0, 0, 0, 0.25);
-        border: 1px dashed rgba(62, 109, 146, 0.35);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .upgrader-game .spinner-graph {
@@ -350,7 +352,7 @@
         fill: none;
         stroke-width: 0.3;
         stroke-dashoffset: 25;
-        stroke: #00ffc2;
+        stroke: #ff6b35;
     }
 
     .upgrader-game .spinner-inner {
@@ -362,7 +364,7 @@
         align-items: center;
         font-size: 18px;
         font-weight: 700;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .upgrader-game .inner-chance {
@@ -372,13 +374,13 @@
     }
 
     .upgrader-game .inner-chance span {
-        color: #00ffc2;
+        color: #ff6b35;
     }
 
     .upgrader-game .inner-tickets {
         font-size: 12px;
         font-weight: 600;
-        color: rgba(187, 191, 208, 0.5);
+        color: rgba(255, 255, 255, 0.6);
     }
 
     .upgrader-game button.button-toggle {
@@ -392,7 +394,7 @@
 
     .upgrader-game button.button-toggle span {
         margin-right: 4px;
-        color: #00ffc2;
+        color: #ff6b35;
     }
 
     .upgrader-game button.button-toggle svg {
@@ -418,8 +420,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #325baa;
-        clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 25%, 100% 75%, calc(100% - 8px) 100%, 8px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
     }
 
     .upgrader-game button.button-upgrade .button-inner {
@@ -428,9 +430,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(90deg, rgba(97, 138, 241, 0.1) 0%, rgba(28, 99, 182, 0.1) 100%),
-                    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), #05233a;
-        clip-path: polygon(8px 0, calc(100% - 8px) 0, 100% 25%, 100% 75%, calc(100% - 8px) 100%, 8px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 14px;
     }
 
     .upgrader-game button.button-upgrade .button-inner svg:nth-child(1) {
@@ -451,9 +452,6 @@
     .upgrader-game button.button-upgrade .button-inner span {
         font-size: 14px;
         font-weight: 800;
-        background: linear-gradient(90deg, #618AF1 0%, #1C63B6 100%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #ffffff;
     }
 </style>

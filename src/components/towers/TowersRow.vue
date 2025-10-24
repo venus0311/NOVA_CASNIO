@@ -113,7 +113,7 @@
         position: absolute;
         top: 0;
         border-radius: 3px;
-        background: linear-gradient(255deg, #00ffc2 -20%, #00aa6d 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-row.row-active::before {
@@ -156,16 +156,16 @@
         position: absolute;
         top: 0;
         left: 0;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        border-radius: 12px;
         z-index: -1;
     }
 
     .towers-row  .tile-coin::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #01e0a3 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-row  .tile-lose::before {
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #f55046 100%);
+        background: rgba(255, 107, 0, 0.3);
     }
 
     .towers-row  .tile-coin::after,
@@ -176,8 +176,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background: #031421;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 11px;
         z-index: -1;
     }
 
@@ -188,7 +188,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        border-radius: 11px;
     }
 
     .towers-row .coin-inner {
@@ -196,13 +196,11 @@
     }
 
     .towers-row .coin-inner {
-        background: linear-gradient(255deg, rgba(0, 255, 194, 0.15) 45%, rgba(0, 170, 109, 0.15) 100%);
+        background: rgba(255, 107, 0, 0.15);
     }
 
     .towers-row .lose-inner {
-        background: linear-gradient(0deg, rgba(245, 80, 70, 0.25), rgba(245, 80, 70, 0.25)), 
-                    linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
-                    linear-gradient(255deg, #07263d 0%, #07243a 100%);
+        background: rgba(255, 107, 0, 0.15);
     }
 
     .towers-row button.button-reveal {
@@ -224,14 +222,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        border-radius: 11px;
     }
 
     .towers-row.row-active button.button-reveal .button-inner,
     .towers-row.row-revealed button.button-reveal .button-inner {
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), 
-                    radial-gradient(160% 160% at 50% 30%, rgba(0, 194, 255, 0.2) 0%, rgba(0, 0, 0, 0) 100%), 
-                    linear-gradient(255deg, #07263d 0%, #07243a 100%);
+        background: rgba(255, 107, 0, 0.15);
     }
 
     .towers-row.row-revealed button.button-reveal .button-inner {
@@ -249,7 +245,7 @@
     .towers-row .coin-inner .inner-value  {
         font-size: 11px;
         font-weight: 600;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .towers-row button.button-reveal .button-inner .inner-value span,

@@ -2,6 +2,7 @@
     <div class="home">
         <HeroBanner />
         <PopularGames />
+        <AllGames />
         <LiveFeed />
     </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
     import HeroBanner from '@/components/HeroBanner';
     import PopularGames from '@/components/PopularGames';
+    import AllGames from '@/components/AllGames';
     import LiveFeed from '@/components/LiveFeed';
 
     export default {
@@ -19,6 +21,7 @@
         components: {
             HeroBanner,
             PopularGames,
+            AllGames,
             LiveFeed
         }
     }

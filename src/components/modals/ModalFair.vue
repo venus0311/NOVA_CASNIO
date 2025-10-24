@@ -101,9 +101,10 @@
         flex-direction: column;
         align-items: center;
         padding: 35px 30px 30px 30px;
-        border-radius: 15px;
-        background: radial-gradient(100% 100% at 50% 0%, rgba(0, 255, 194, 0.2) 0%, rgba(7, 38, 61, 0) 80%), 
-                    linear-gradient(256deg, #07263d 0%, #07243a 100%);
+        border-radius: 20px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.8);
     }
 
     .modal-fair .fair-header {
@@ -120,7 +121,8 @@
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        background: linear-gradient(255deg, rgba(0, 255, 194, 0.2)0%, rgba(0, 170, 109, 0.2) 100%);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .modal-fair .header-icon img {
@@ -133,6 +135,7 @@
         text-align: center;
         font-size: 32px;
         font-weight: 900;
+        color: #ffffff;
     }
 
     .modal-fair .fair-info {
@@ -142,8 +145,8 @@
         text-align: center;
         font-size: 14px;
         font-weight: 600;
-        color: #bbbfd0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .modal-fair .fair-nav {
@@ -151,8 +154,9 @@
         flex-wrap: wrap;
         margin-top: 30px;
         padding: 4px;
-        background: #071f2e;
-        clip-path: polygon(11px 0, calc(100% - 11px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 11px) 100%, 11px 100%, 0 calc(100% - 14px), 0 14px);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .modal-fair .fair-nav button {
@@ -178,8 +182,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, #053236 0%, #01e0a3 100%);
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 12px;
         z-index: -1;
     }
 
@@ -190,8 +194,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background-color: #063543;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 11px;
         z-index: -1;
     }
 
@@ -202,26 +206,22 @@
         align-items: center;
         justify-content: center;
         padding: 0 16px;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        border-radius: 12px;
     }
 
     .modal-fair .fair-nav button.button-active .button-inner {
-        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 255, 194, 0.2) 0%, rgba(0, 0, 0, 0) 100%), 
-                    linear-gradient(255deg, rgba(0, 255, 194, 0.05) 0%, rgba(0, 170, 109, 0.05) 100%);
+        background: rgba(255, 255, 255, 0.12);
     }
 
     .modal-fair .fair-nav button .button-inner span {
         font-size: 14px;
         font-weight: 800;
-        color: #bbbfd0;
+        color: #ffffff;
     }
 
     .modal-fair .fair-nav button.button-active .button-inner span {
-        background: linear-gradient(250deg, #00ffc2 0%, #00aa6d 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        color: #ffffff;
+        font-weight: 900;
     }
 
     .modal-fair .fair-content {

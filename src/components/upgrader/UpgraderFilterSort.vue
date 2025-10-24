@@ -53,8 +53,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #092a45;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
     }
 
     button.upgrader-filter-sort .button-inner {
@@ -64,13 +64,13 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 15px;
-        background-color: #09263f;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
     }
 
     button.upgrader-filter-sort .button-inner svg.toggle-icon {
         width: 9px;
-        fill: #bbbfd0;
+        fill: #ffffff;
         transition: all 0.3s ease;
     }
 
@@ -83,20 +83,20 @@
         align-items: center;
         font-size: 12px;
         font-weight: 600;
-        color: #49687d;
+        color: #ffffff;
     }
 
     button.upgrader-filter-sort .inner-value svg {
         width: 12px;
         margin-right: 8px;
-        fill: #01e0a3;
+        fill: #ff6b35;
     }
 
     button.upgrader-filter-sort .inner-value span {
         text-transform: uppercase;
         margin-left: 5px;
         font-weight: 700;
-        color: #01e0a3;
+        color: #ff6b35;
     }
 
     @media only screen and (max-width: 750px) {

@@ -50,8 +50,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: #0a273f;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
         z-index: -1;
     }
 
@@ -62,13 +62,13 @@
         font-size: 14px;
         font-weight: 600;
         color: #ffffff;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), 
-                    linear-gradient(223deg, rgba(5, 29, 48, 0.35) 0%, rgba(31, 99, 153, 0.05) 50%, rgba(5, 29, 48, 0.35) 100%), #041e31;
-        clip-path: polygon(9px 0, calc(100% - 9px) 0, 100% 25%, 100% 75%, calc(100% - 9px) 100%, 9px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
+        border: none;
     }
 
     .upgrader-filter-search input::placeholder {
-        color: rgba(110, 149, 182, 0.5);
+        color: #888888;
     }
 
     .upgrader-filter-search svg {
@@ -76,7 +76,7 @@
         top: 50%;
         left: 15px;
         transform: translate(0, -50%);
-        fill: rgba(110, 149, 182, 0.5);
+        fill: #ffffff;
     }
 
     @media only screen and (max-width: 750px) {

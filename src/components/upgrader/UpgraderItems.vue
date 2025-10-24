@@ -69,7 +69,7 @@
         width: 1200px;
         margin-top: 35px;
         padding-top: 20px;
-        border-top: 1px solid rgba(41, 114, 169, 0.16);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .upgrader-items .items-header {
@@ -118,7 +118,7 @@
         text-transform: uppercase;
         font-size: 12px;
         font-weight: 600;
-        color: #5e768e;
+        color: #ffffff;
     }
 
     .upgrader-items .content-list.fade-enter-active,

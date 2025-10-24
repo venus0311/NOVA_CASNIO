@@ -1,9 +1,9 @@
 <template>
-    <div class="popular-games">
-        <h2 class="section-title">Popular Games</h2>
+    <div class="all-games">
+        <h2 class="section-title">All Games</h2>
         <div class="games-grid">
             <div class="game-card" v-for="game in games" :key="game.id" @click="navigateToGame(game.route)">
-                <div class="game-screen" :class="{ 'casino-bg': game.id === 1, 'card2-bg': game.id === 2, 'card3-bg': game.id === 3, 'card4-bg': game.id === 4, 'card5-bg': game.id === 5 }">
+                <div class="game-screen" :class="game.bgClass">
                     <div class="title-curve">
                         <span class="card-title">{{ game.name }}</span>
                     </div>
@@ -20,44 +20,72 @@
 
 <script>
 export default {
-    name: 'PopularGames',
+    name: 'AllGames',
     data() {
         return {
             games: [
                 {
                     id: 1,
-                    name: 'Cases Battle',
+                    name: 'Crash',
                     subtitle: 'NOVA-CASINO Popular',
-                    route: '/battles',
-                    image: require('@/assets/img/chest.png')
+                    route: '/crash',
+                    bgClass: 'casino-bg'
                 },
                 {
                     id: 2,
                     name: 'Mines',
                     subtitle: 'RBXGOLD Original',
                     route: '/mines',
-                    image: require('@/assets/img/mines/mine.png')
+                    bgClass: 'card2-bg'
                 },
                 {
                     id: 3,
-                    name: 'Cases Battle',
+                    name: 'Upgrader',
                     subtitle: 'NOVA-CASINO Popular',
-                    route: '/battles',
-                    image: require('@/assets/img/chest.png')
+                    route: '/upgrader',
+                    bgClass: 'card3-bg'
                 },
                 {
                     id: 4,
-                    name: 'Mines',
+                    name: 'Towers',
                     subtitle: 'RBXGOLD Original',
-                    route: '/mines',
-                    image: require('@/assets/img/mines/mine.png')
+                    route: '/towers',
+                    bgClass: 'card4-bg'
                 },
                 {
                     id: 5,
-                    name: 'Cases Battle',
+                    name: 'Blackjack',
+                    subtitle: 'NOVA-CASINO Popular',
+                    route: '/blackjack',
+                    bgClass: 'card5-bg'
+                },
+                {
+                    id: 6,
+                    name: 'Duels',
+                    subtitle: 'RBXGOLD Original',
+                    route: '/duels',
+                    bgClass: 'casino-bg'
+                },
+                {
+                    id: 7,
+                    name: 'Battles',
                     subtitle: 'NOVA-CASINO Popular',
                     route: '/battles',
-                    image: require('@/assets/img/chest.png')
+                    bgClass: 'card2-bg'
+                },
+                {
+                    id: 8,
+                    name: 'Unbox',
+                    subtitle: 'RBXGOLD Original',
+                    route: '/unbox',
+                    bgClass: 'card3-bg'
+                },
+                {
+                    id: 9,
+                    name: 'Roll',
+                    subtitle: 'NOVA-CASINO Popular',
+                    route: '/roll',
+                    bgClass: 'card4-bg'
                 }
             ]
         }
@@ -71,7 +99,7 @@ export default {
 </script>
 
 <style scoped>
-.popular-games {
+.all-games {
     padding: var(--spacing-2xl) var(--spacing-lg);
 }
 
@@ -120,6 +148,22 @@ export default {
 }
 
 .game-card:nth-child(5) {
+    border: 2px solid #CC88E5;
+}
+
+.game-card:nth-child(6) {
+    border: 2px solid #13C6FF;
+}
+
+.game-card:nth-child(7) {
+    border: 2px solid #5BFFBB;
+}
+
+.game-card:nth-child(8) {
+    border: 2px solid #7A8BFD;
+}
+
+.game-card:nth-child(9) {
     border: 2px solid #CC88E5;
 }
 
@@ -229,44 +273,34 @@ export default {
     background: #CC88E5;
 }
 
+.game-card:nth-child(6) .title-curve::after {
+    background: #13C6FF;
+}
+
+.game-card:nth-child(7) .title-curve::after {
+    background: #5BFFBB;
+}
+
+.game-card:nth-child(8) .title-curve::after {
+    background: #7A8BFD;
+}
+
+.game-card:nth-child(9) .title-curve::after {
+    background: #CC88E5;
+}
+
 .card-title {
     font-size: 14px;
     font-weight: 700;
-    text-align: center;
-    position: relative;
+    color: white;
     z-index: 3;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 120px;
+    position: relative;
 }
-
-
 
 .game-info {
     text-align: center;
     z-index: 2;
     position: relative;
-}
-
-.game-screen.casino-bg .game-info {
-    color: white;
-}
-
-.game-screen.card2-bg .game-info {
-    color: white;
-}
-
-.game-screen.card3-bg .game-info {
-    color: white;
-}
-
-.game-screen.card4-bg .game-info {
-    color: white;
-}
-
-.game-screen.card5-bg .game-info {
-    color: white;
 }
 
 .game-title {
@@ -276,51 +310,11 @@ export default {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.game-screen.casino-bg .game-title {
-    color: white;
-}
-
 .game-subtitle {
     font-size: 14px;
     margin: 0 0 20px 0;
     opacity: 0.9;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.game-screen.casino-bg .game-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.game-screen.card2-bg .game-title {
-    color: white;
-}
-
-.game-screen.card2-bg .game-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.game-screen.card3-bg .game-title {
-    color: white;
-}
-
-.game-screen.card3-bg .game-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.game-screen.card4-bg .game-title {
-    color: white;
-}
-
-.game-screen.card4-bg .game-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.game-screen.card5-bg .game-title {
-    color: white;
-}
-
-.game-screen.card5-bg .game-subtitle {
-    color: rgba(255, 255, 255, 0.8);
 }
 
 .play-button {
@@ -347,8 +341,6 @@ export default {
     backdrop-filter: blur(15px);
 }
 
-/* Game-specific styling - First card has casino background */
-
 @media (max-width: 768px) {
     .games-grid {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -366,13 +358,6 @@ export default {
     .play-button {
         font-size: 12px;
         padding: 8px 16px;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .play-button {
-        font-size: 10px;
-        padding: 6px 12px;
     }
 }
 </style>

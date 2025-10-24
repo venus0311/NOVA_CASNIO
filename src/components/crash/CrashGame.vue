@@ -177,14 +177,69 @@ export default {
         width: 100%;
         height: 460px;
         position: relative;
-        border-radius: 15px;
-        background: linear-gradient(0deg, rgba(5, 31, 51, 0.4), rgba(5, 31, 51, 0.4)),
+        border-radius: 20px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%),
             radial-gradient(100% 100% at 50% 50%,
-                rgba(156, 88, 223, 0.3) 0%,
-                rgba(0, 0, 0, 0) 100%),
-            rgba(112, 73, 197, 0.05);
-        border: 1px solid rgba(20, 68, 104, 0.35);
-        box-shadow: inset 0px 0px 35px rgba(0, 0, 0, 0.65);
+                rgba(0, 0, 0, 0.8) 0%,
+                rgba(0, 0, 0, 0.9) 100%);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: inset 0px 0px 35px rgba(0, 0, 0, 0.8), 0px 4px 20px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+    }
+
+    .crash-game::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+            radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.8), transparent),
+            radial-gradient(1px 1px at 40px 60px, rgba(255,255,255,0.6), transparent),
+            radial-gradient(1px 1px at 70px 20px, rgba(255,255,255,0.9), transparent),
+            radial-gradient(2px 2px at 100px 50px, rgba(255,255,255,0.7), transparent),
+            radial-gradient(1px 1px at 130px 10px, rgba(255,255,255,0.5), transparent),
+            radial-gradient(1px 1px at 160px 40px, rgba(255,255,255,0.8), transparent),
+            radial-gradient(2px 2px at 190px 20px, rgba(255,255,255,0.6), transparent),
+            radial-gradient(1px 1px at 220px 60px, rgba(255,255,255,0.7), transparent),
+            radial-gradient(1px 1px at 250px 30px, rgba(255,255,255,0.4), transparent),
+            radial-gradient(2px 2px at 280px 50px, rgba(255,255,255,0.9), transparent);
+        background-repeat: repeat;
+        background-size: 300px 200px;
+        animation: twinkle 4s ease-in-out infinite alternate;
+        z-index: 0;
+        opacity: 0.8;
+    }
+
+    .crash-game::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background-image: 
+            radial-gradient(1px 1px at 15px 20px, rgba(255,255,255,0.9), transparent),
+            radial-gradient(1px 1px at 35px 40px, rgba(255,255,255,0.7), transparent),
+            radial-gradient(2px 2px at 55px 10px, rgba(255,255,255,0.8), transparent),
+            radial-gradient(1px 1px at 75px 30px, rgba(255,255,255,0.6), transparent),
+            radial-gradient(1px 1px at 95px 50px, rgba(255,255,255,0.9), transparent),
+            radial-gradient(2px 2px at 115px 15px, rgba(255,255,255,0.7), transparent),
+            radial-gradient(1px 1px at 135px 35px, rgba(255,255,255,0.5), transparent),
+            radial-gradient(1px 1px at 155px 55px, rgba(255,255,255,0.8), transparent),
+            radial-gradient(2px 2px at 175px 25px, rgba(255,255,255,0.6), transparent),
+            radial-gradient(1px 1px at 195px 45px, rgba(255,255,255,0.9), transparent);
+        background-repeat: repeat;
+        background-size: 220px 120px;
+        animation: twinkle 5s ease-in-out infinite alternate;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    @keyframes twinkle {
+        0% { opacity: 0.3; }
+        100% { opacity: 1; }
     }
 
     .crash-game .game-graph {
@@ -193,6 +248,7 @@ export default {
         bottom: 5px;
         left: 5px;
         right: 5px;
+        z-index: 1;
     }
 
     .graph-crash {
@@ -208,6 +264,7 @@ export default {
         top: 15px;
         left: 0;
         padding: 0 20px;
+        z-index: 2;
     }
 
     .crash-game .info-network {
@@ -281,10 +338,9 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        border-radius: 15px;
-        background-image: url("~@/assets/img/crash_background.png");
-        background-repeat: no-repeat;
-        background-size: cover;
+        border-radius: 20px;
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%),
+            radial-gradient(ellipse at center, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%);
         overflow: hidden;
         z-index: -1;
     }
@@ -306,14 +362,16 @@ export default {
         line-height: 88px;
         font-size: 84px;
         font-weight: 700;
-        color: #f55046;
+        color: #ffffff;
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
     }
 
     .crash-game .completed-over,
     .crash-game .rolling-payout {
         font-size: 18px;
         font-weight: 700;
-        color: #bbbfd0;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     }
 
     .crash-game .rolling-amount {
@@ -334,7 +392,8 @@ export default {
     .crash-game .amount-value {
         font-size: 16px;
         font-weight: 600;
-        color: #bbbfd0;
+        color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     }
 
     .crash-game .amount-value span {
@@ -351,8 +410,8 @@ export default {
         text-align: center;
         font-size: 54px;
         font-weight: 800;
-        text-shadow: 0px 5px 3px rgba(0, 0, 0, 0.15);
-        background: linear-gradient(255deg, #00ffc2 0%, #00aa6d 100%);
+        text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+        background: linear-gradient(255deg, #ffffff 0%, #cccccc 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -363,6 +422,7 @@ export default {
         font-size: 18px;
         font-weight: 700;
         color: #ffffff;
+        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
     }
 
     @media only screen and (max-width: 550px) {

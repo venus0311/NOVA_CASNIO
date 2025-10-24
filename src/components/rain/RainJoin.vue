@@ -149,8 +149,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        border-radius: 15px;
-        background: linear-gradient(180deg, rgba(0, 255, 194, 0) 0%, #00ffc2 100%);
+        border-radius: 20px;
+        background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%);
         z-index: -1;
     }
 
@@ -161,8 +161,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        border-radius: 15px;
-        background: #051d30;
+        border-radius: 19px;
+        background: rgba(255, 255, 255, 0.05);
         z-index: -1;
     }
 
@@ -183,9 +183,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 8px 0 16px 0;
-        border-radius: 15px;
-        background: radial-gradient(225% 225% at 50% -10%, rgba(1, 182, 121, 0.43) 0%, rgba(0, 0, 0, 0) 100%), 
-                    linear-gradient(255deg, rgba(0, 255, 194, 0.05) 0%, rgba(0, 170, 109, 0.05) 90%), rgba(0, 0, 0, 0.34);
+        border-radius: 19px;
+        background: rgba(255, 255, 255, 0.08);
     }
 
     .rain-join .inner-type {
@@ -294,7 +293,7 @@
         top: 0;
         left: 0;
         border-radius: 50%;
-        background: linear-gradient(180deg, rgba(0, 255, 194, 0) 0%, #00ffc2 100%);
+        background: rgba(255, 107, 0, 0.3);
         z-index: -1;
     }
 
@@ -305,7 +304,7 @@
         justify-content: center;
         align-items: flex-end;
         border-radius: 50%;
-        background: #036e57;
+        background: rgba(255, 255, 255, 0.1);
         overflow: hidden;
     }
 
@@ -320,14 +319,15 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 13px;
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.34) 0%, rgba(0, 0, 0, 0) 90%);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
     }
 
     .rain-join .site-text span {
         font-size: 16px;
         font-weight: 800;
-        text-shadow: 0px 2px 35px rgba(1, 230, 169, 0.59), 0px 4px 25px rgba(15, 41, 63, 0.35);
+        color: #ffffff;
+        text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
     }
 
     .rain-join .inner-info {
@@ -403,8 +403,8 @@
         position: absolute;
         top: 0;
         left: 0;
-        background: linear-gradient(180deg, rgba(0, 255, 194, 0) 0%, #00ffc2 100%);
-        clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 25%, 100% 75%, calc(100% - 3px) 100%, 3px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 15px;
         z-index: -1;
     }
 
@@ -415,8 +415,8 @@
         position: absolute;
         top: 1px;
         left: 1px;
-        background: #164844;
-        clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 25%, 100% 75%, calc(100% - 3px) 100%, 3px 100%, 0 75%, 0 25%);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 14px;
         z-index: -1;
     }
 
@@ -426,12 +426,12 @@
         display: flex;
         justify-content: center;
         align-items: center;    
-        background: linear-gradient(255deg, #00ffc2 20%, #00aa6d 70%);
-        clip-path: polygon(3px 0, calc(100% - 3px) 0, 100% 25%, 100% 75%, calc(100% - 3px) 100%, 3px 100%, 0 75%, 0 25%);
+        background: rgba(255, 107, 0, 0.3);
+        border-radius: 14px;
     }
 
     .rain-join button.button-claim:disabled .button-inner {
-        background: linear-gradient(265deg, rgba(0, 255, 194, 0.25) 20%, rgba(0, 170, 109, 0.25) 70%);
+        background: rgba(255, 107, 0, 0.15);
     }
 
     .rain-join button.button-claim .button-inner span {
@@ -441,10 +441,6 @@
     }
 
     .rain-join button.button-claim:disabled .button-inner span {
-        background: linear-gradient(256.23deg, #00FFC2 0%, #00AA6D 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        color: #888888;
     }
 </style>
