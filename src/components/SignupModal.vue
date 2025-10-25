@@ -106,6 +106,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
     name: 'SignupModal',
     props: {
@@ -127,13 +129,33 @@ export default {
         }
     },
     methods: {
+        ...mapActions([
+            'modalsSetShow',
+            'modalsSetData',
+            'notificationShow'
+        ]),
         close() {
             this.$emit('close');
         },
         handleSignup() {
-            // Handle signup logic here
-            console.log('Signup form submitted:', this.form);
-            // You can emit an event to parent component or call an API
+            if(this.form.email === null || this.form.email.trim() === '') {
+                this.notificationShow({ type: 'error', message: 'Your entered email is invalid.' });
+                return;
+            }
+
+            if(this.form.password === null || this.form.password.trim() === '') {
+                this.notificationShow({ type: 'error', message: 'Your entered password is invalid.' });
+                return;
+            }
+
+            if(!this.form.agreeToTerms) {
+                this.notificationShow({ type: 'error', message: 'You must agree to the Terms of Service.' });
+                return;
+            }
+
+            const payload = { email: this.form.email, password: this.form.password };
+            this.modalsSetData({ typeCaptcha: 'credentialsRegister', data: payload });
+            this.modalsSetShow('Captcha');
             this.$emit('signup', this.form);
             this.close();
         },

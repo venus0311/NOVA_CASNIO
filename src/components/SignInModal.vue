@@ -69,6 +69,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
     name: 'SignInModal',
     props: {
@@ -86,14 +88,27 @@ export default {
         }
     },
     methods: {
+        ...mapActions([
+            'modalsSetShow',
+            'modalsSetData',
+            'notificationShow'
+        ]),
         close() {
             this.$emit('close');
         },
         handleSignIn() {
-            // Handle sign in logic here
-            console.log('Sign in form submitted:', this.form);
-            // You can emit an event to parent component or call an API
-            this.$emit('signin', this.form);
+            if(this.form.email === null || this.form.email.trim() === '') {
+                this.notificationShow({ type: 'error', message: 'Your entered email is invalid.' });
+                return;
+            }
+
+            if(this.form.password === null || this.form.password.trim() === '') {
+                this.notificationShow({ type: 'error', message: 'Your entered password is invalid.' });
+                return;
+            }
+
+            this.modalsSetData({ typeCaptcha: 'credentialsLogin', data: { email: this.form.email, password: this.form.password } });
+            this.modalsSetShow('Captcha');
             this.close();
         },
         switchToSignUp() {
